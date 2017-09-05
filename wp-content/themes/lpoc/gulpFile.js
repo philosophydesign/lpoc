@@ -81,7 +81,7 @@ gulp.task('css', ['images'], () => {
 // JavaScript settings
 const js = {
   src         : dir.src + 'scripts/**/*',
-  build       : dir.build + 'scripts/',
+  build       : dir.dest + 'scripts/',
   filename    : 'main.js'
 }
 
@@ -92,7 +92,7 @@ gulp.task('js', () => {
     //.pipe(mainBowerFiles())
     .pipe(deporder())
     .pipe(concat(js.filename))
-    .pipe(stripdebug())
+    //.pipe(stripdebug())
     .pipe(uglify())
     .pipe(gulp.dest(js.build))
     .pipe(browsersync ? browsersync.reload({ stream: true }) : gutil.noop());
