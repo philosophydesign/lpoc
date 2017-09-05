@@ -1,0 +1,21 @@
+{
+  "name": "lpoc",
+  "description": "",
+  "main": "index.js",
+  "authors": [
+    "Fu Hoang <fu@philosophydesign.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/philosophydesign/lpoc",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7",
+    "jquery": "^3.2.1"
+  }
+}
