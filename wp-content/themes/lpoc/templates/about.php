@@ -54,9 +54,9 @@ $loop = new WP_Query( $args );
     <div class="container">
       <div class="row">
         <div class="col-xs-12">
-          <h3 class="title card__title">Meet the experts</h3>
+          <h3 class="title card__title"><?=get_field('expert_title')?></h3>
           <div class="copy">
-            <p>Meet our team dedicated to help members get the most from their homes by providing details advice, information and support for just about every conceivable issue associated with ownership.</p>
+            <?=get_field('expert_summary')?>
           </div>
         </div>
 
