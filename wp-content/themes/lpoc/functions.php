@@ -24,10 +24,37 @@ function create_post_type() {
       'has_archive' => true,
     )
   );
+
+
+  register_post_type( 'suppliers',
+    array(
+      'labels' => array(
+        'name' => __( 'Suppliers' ),
+        'singular_name' => __( 'Suppliers' )
+      ),
+      'public' => true,
+      'has_archive' => true,
+    )
+  );
 }
 add_action( 'init', 'create_post_type' );
 
 
+
+// Register Taxonomy
+function create_suppliers_tax() {
+	register_taxonomy(
+		'category',
+		'suppliers',
+		array(
+			'label' => __( 'category' ),
+			'rewrite' => array( 'slug' => 'category' ),
+			'hierarchical' => true,
+		)
+	);
+}
+
+add_action( 'init', 'create_suppliers_tax' );
 
 
 
